@@ -1,0 +1,6 @@
+venv/
+
+# Local model artifacts
+specialty_model_v2/model.safetensors
+*.safetensors
+__pycache__/
