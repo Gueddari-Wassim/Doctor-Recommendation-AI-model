@@ -1,6 +1,6 @@
 # 🩺 Doctor-Recommendation AI Model
 
-A **medical specialty classification model** that predicts the most relevant doctor specialty
+A NLP **medical specialty classification model** that predicts the most relevant doctor specialty
 based on user-provided symptom descriptions. Built with **PyTorch** and served via **FastAPI**.
 
 ---
