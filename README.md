@@ -1,40 +1,37 @@
-🩺 Doctor‑Recommendation AI Model
+# 🩺 Doctor-Recommendation AI Model
 
-A specialty classification NLP model that predicts the most relevant medical specialty based on user‑provided symptom descriptions — built with PyTorch and deployed via FastAPI.
+A **medical specialty classification model** that predicts the most relevant doctor specialty
+based on user-provided symptom descriptions. Built with **PyTorch** and served via **FastAPI**.
 
-This model serves as the core AI powerhouse for medical orientation systems, helping connect users to the most appropriate medical domain based on textual symptoms.
+---
 
-📌 Repository Purpose
+## 📌 Purpose
 
-This repository holds:
+This repo contains:
 
-A fine‑tuned text classification model (specialty_model_v2)
+- Fine-tuned text classification model (`specialty_model_v2`)
+- REST API for inference
+- Symptom → medical specialty recommendation logic
 
-A REST API to serve the model for inference
+---
 
-Lightweight code for symptom → medical specialty recommendation
+## 🧠 Model Overview
 
-It does not include a frontend — it’s meant to be used as an independent microservice for AI inference.
+- **Task:** Medical specialty classification  
+- **Framework:** PyTorch + Transformers  
+- **Deployment:** FastAPI  
+- **Input:** User symptom description (text)  
+- **Output:** Top-k predicted medical specialties with confidence scores  
 
-🧠 Model Overview
+---
 
-Task: Text‑based medical specialty recommendation
+## 🚀 Quick Start
 
-Framework: PyTorch + Transformers
+### Clone Repository
+git clone https://github.com/Gueddari-Wassim/Doctor-Recommendation-AI-model.git
+cd Doctor-Recommendation-AI-model 
 
-Deployment: FastAPI API
-
-Input: User symptom description (plain text)
-
-Output: Top‑k predicted medical specialty labels with confidence scores
-
-The model processes natural language text and outputs the most probable medical specialty (e.g., Cardiology, Dermatology, Pulmonology, etc.), which can drive doctor recommendation systems and triage workflows.
-
-🚀 Quick Start
-📥 Clone
-git clone https://github.com/Gueddari-Wassim/Doctor‑Recommendation‑AI‑model.git
-cd Doctor‑Recommendation‑AI‑model
-🛠️ Installation
+## 🛠️ Installation
 
 Create a Python virtual environment:
 
@@ -44,7 +41,7 @@ pip install -r requirements.txt
 
 ⚠️ Ensure you have PyTorch installed compatible with your system’s CUDA/CPU configuration.
 
-🚀 Running the API
+## 🚀 Running the API
 
 Start FastAPI:
 
@@ -70,7 +67,8 @@ It should return something like:
   ],
   "threshold": 0.4
 }
-🧩 Core Logic (Inference)
+
+## 🧩 Core Logic (Inference)
 
 The API works by:
 
@@ -90,7 +88,7 @@ probs = softmax(logits, dim=-1).squeeze(0)
 
 This design ensures fast, reliable inference and supports integration into larger backend services, mobile apps, or dashboards.
 
-🧠 Integrations
+## 🧠 Integrations
 
 This model + API can be used in:
 
@@ -106,11 +104,11 @@ Chatbot assistants
 
 It can be deployed in cloud environments, Docker containers, or serverless functions.
 
-📌 Disclaimer
+## 📌 Disclaimer
 
 This tool does not replace professional medical advice. Predictions are based on learned patterns from training data and should be used to support, not substitute, clinical judgment.
 
-🛠️ Future Improvements
+## 🛠️ Future Improvements
 
 Suggestions:
 
@@ -124,7 +122,7 @@ Integrate additional medical knowledge sources
 
 Publish evaluation on a public test set
 
-⭐ Contributing
+## ⭐ Contributing
 
 Contributions are welcome!
 
